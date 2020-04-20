@@ -25,20 +25,26 @@ echo '<br />';
 echo '<br />';
 echo '<br />';
 
+//$arr [];
 //$arr [] = $Name;
 //$arr [] = 'Surname';
-//
+
+
 //$assoc = [];
 //$assoc = ['name'] = $name;
 //$assoc = ['surname'] = $surname;
 //var_dump($assoc);
-//$user['name'];
+//
+//echo '<br />';
 
+//$user['name'];
+//
 $user = [
     'name' => 'Evgeniy',
     'surname' => 'Lobachevskyi'
 ];
 
 $user['age'] = $age;
+
 echo '<br />';
 echo "My name is {$user['name']} {$user['age']}";
