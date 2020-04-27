@@ -1,17 +1,3 @@
-<?php
-$error = '';
-if (!empty($_POST)) {
-    if (empty($_POST['name'])) {
-        $error = 'Имя не может пустым';
-    }
-    if (empty($_POST['surname'])) {
-        $error = 'Фамилия не может пустой';
-    }
-    if (empty($_POST['age']) || $_POST['age'] < 1) {
-        $error = 'Возраст задан некорректно';
-    }
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,32 +10,31 @@ if (!empty($_POST)) {
 <br/>
 <h1>Форма регистрации</h1>
 <div class="container">
-    <h3 style="color:red"><?=$error ?></h3>
     <div class="float-right">
-        <a href="?lang=ru" class="badge badge-primary">Русский</a>
-        <a href="?lang=ua" class="badge badge-secondary">Украинский</a>
-        <a href="?lang=en" class="badge badge-success">Английский</a>
+        <a href="#" class="badge badge-primary">Русский</a>
+        <a href="#" class="badge badge-secondary">Украинский</a>
+        <a href="#" class="badge badge-success">Английский</a>
     </div>
     <form method="post" action="user.php">
         <div class="form-group">
             <label for="formGroupExampleInput">Имя</label>
             <input type="text" class="form-control" id="formGroupExampleInput" name="name" placeholder="Example input"
-                   value="<?php echo $_POST['name'] ?? 'Ramsi' ?>">
+                   value="<?php echo $_POST['name'] ?? 'Mike' ?>">
         </div>
         <div class="form-group">
             <label for="formGroupExampleInput">Фамилия</label>
             <input type="text" class="form-control" id="formGroupExampleInput" name="surname"
-                   placeholder="Example input" value="<?= $_POST['surname'] ?? 'Bolton' ?>">
+                   placeholder="Example input" value="<?= $_POST['surname'] ?? 'Kardakov' ?>">
         </div>
         <div class="form-group">
             <label for="formGroupExampleInput">Возраст</label>
             <input type="number" class="form-control" id="formGroupExampleInput" name="age" placeholder="Example input"
-                   value="<?= $_POST['age'] ?? '22' ?>">
+                   value="<?= $_POST['age'] ?? '20' ?>">
         </div>
         <div class="form-group">
             <label for="formGroupExampleInput">Почта</label>
             <input type="email" class="form-control" id="formGroupExampleInput" name="email" placeholder="Example input"
-                   value="<?= $_POST['email'] ?? 'lovesansa@gmail.com' ?>">
+                   value="<?= $_POST['email'] ?? 'example@gmail.com' ?>">
         </div>
         <div class="form-group">
             <label for="exampleFormControlSelect1">Example select</label>
